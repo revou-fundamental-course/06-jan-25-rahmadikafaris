@@ -1,73 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!--css-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
     <link rel="stylesheet" href="css\style.css">
 </head>
+
 <body>
-    <!--logo & Navigation-->
-    <header style="
-        
+<header>
+    <img src="assets\Logo RevoU.png" class="Logo">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Headquarter</a></li>
+            <li><a href="#">Portfolios</a></li>
+            <li><a href="#">Message Us</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <div class="logo-icon"</div>
+<section class="hero">
+    <h1>Hi, Welcome To My Website</h1>
+    <p class="slogan">InnovaTech Solutions: “Inovasi Tanpa Batas, Prestasi Tanpa Tanding!”</p>
+    <div class="image-placeholder">
+        <img src="assets\imgbackgroud1.jpg"width="850px" height="400px">
+    </div>
+</section>
 
-        <!--Navigation-->
-        <nav>
-            <a href="#home-page" class="left-rounded"></a>
-            <a href="#our-profile"></a>
-            <a href="#portofolio"></a>
-            <a href="#massage-us" class="right-rounded"></a>
-        </nav>
-    </header>
-    <hr>
+<section class="headquarters">
+    <h2>Our Headquarter</h2>
+    <div class="locations">
+        <div class="location"><img src="assets\Jakarta.jpg" width="100%" height="100%"></div>
+        <div class="location"><img src="assets\Bandung.jpg" width="100%" height="100%"></div>
+        <div class="location"><img src="assets\Surabaya.jpg" width="100%" height="100%"></div>
+    </div>
+</section>
 
-    <!--Main Content-->
-    <main>
-        <!--Home Page-->
-        <section>
-            <!--title-->
-            <header id="home-page">
-            <h1>Hi <span id="user-greeting"></span>, Welcome To My Website</h1>
-            <p>Lorem ipsum dolor sit amet adipiscing..</p>
-            </header>
+<section class="message-us">
+    <h2>Message Us</h2>
+    <form>
+        <input type="text" placeholder="Nama" required>
+        <input type="date" placeholder="Tanggal Lahir" required>
+        <label>
+            <input type="radio" name="Jenis Kelamin" value="Laki-laki" required> Laki-laki
+        </label>
+        <label>
+            <input type="radio" name="Jenis Kelamin" value="Perempuan" required> Perempuan
+        </label>
+        <textarea placeholder="Pesan" rows="10" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
 
-            <nav>
+<footer class="footer">
+    <p>Copyright 2025 - Baymax</p>
+</footer>
 
-            </nav>
-        </section>
-        
-        <!--Our Profile-->
-        <section>
-            <!--title-->
-
-            <header id="our-profile">
-                <h1>Our Profile</h1>
-            </header>
-            <div class="content"></div>
-        </section>
-
-        <!--Portofolio-->
-        <section>
-            <!--title-->
-            <header id="portofolio">
-                <h1>Portofolio</h1>
-            </header>
-            <div class="content"></div>
-        </section>
-        
-        <!--Massage Us-->
-        <section>
-            <!--title-->
-            <header id="massage-us">
-                <h1>Massage Us</h1>
-            </header>
-            <div class="content"></div>
-        </section>
-
-    </main>
-    <footer>
-        <p>2025 - Created By Rahmadika Faris Al-Afif</p>
-    </footer>
 </body>
 </html>

@@ -1,44 +1,135 @@
+/*Ini File CSS*/
 
-
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;"
-}
-.logo-icon {
+.Logo {
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-image: url();
     background-size: cover;
-
 }
 
-nav {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #666;
+}
+
+.slogan {
+    font-style:italic;
+}
+
+header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
 }
 
-.left-rounded {
-    border-radius: ;
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
-nav>a {
-    border: 1px solid;
-    padding: 8px;
-    color: black;
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
     text-decoration: none;
+    color: #333;
+}
 
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ccc;
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero .slogan {
+    font-size: 16px;
+    color: black;
 
 }
 
-.banner-image {
-    border: ;
-    height: ;
+.hero .image-placeholder {
+    width: 100%;
+    max-width: 850px;
+    height: 400px;
+    margin: 30px auto;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.content {
-    height: 500px;
-}
-
-footer {
+.headquarters {
+    padding: 20px;
     text-align: center;
 }
+
+.headquarters h2 {
+    margin-bottom: 10px;
+}
+
+.headquarters .locations {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.headquarters .location {
+    width: 250px;
+    height: 350px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption {
+    caption-side: bottom =;
+}
+
+.message-us {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.message-us form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.message-us form input,
+.message-us form textarea,
+.message-us form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.footer {
+    text-align: center;
+    padding: 1px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+}
+
+@media only screen and (max-width: 600px) {
+    fe
+}
+    
