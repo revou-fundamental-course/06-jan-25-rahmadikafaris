@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css\style.css">
 </head>
 
 <body>
-<header>
-    <img src="assets\Logo RevoU.png" class="Logo">
+    <!-- Logo & Navigation -->
+  <header>
+    <!-- Logo -->
+    <img class="logo" alt="revou-logo" src="assets\Logo RevoU.png">
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -20,42 +25,96 @@
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Hi, Welcome To My Website</h1>
-    <p class="slogan">InnovaTech Solutions: “Inovasi Tanpa Batas, Prestasi Tanpa Tanding!”</p>
-    <div class="image-placeholder">
-        <img src="assets\imgbackgroud1.jpg"width="850px" height="400px">
-    </div>
-</section>
+    <!-- Main Content -->
+<main>
+    <!-- Home Page -->
+    <section class="hero">
+        <h1>Hi <span id="nama"></span>, Welcome To My Website</h1>
+        <p class="slogan">InnovaTech Solutions: “Inovasi Tanpa Batas, Prestasi Tanpa Tanding!”</p>
 
-<section class="headquarters">
-    <h2>Our Headquarter</h2>
-    <div class="locations">
-        <div class="location"><img src="assets\Jakarta.jpg" width="100%" height="100%"></div>
-        <div class="location"><img src="assets\Bandung.jpg" width="100%" height="100%"></div>
-        <div class="location"><img src="assets\Surabaya.jpg" width="100%" height="100%"></div>
-    </div>
-</section>
+        <div>
+            <img 
+                class="img-slideshow"
+                src="assets\imgbackgroud1.jpeg" width="100%" height="700px"/>
+            <img
+                class="img-slideshow"
+                src="assets\imgbackgroud2.jpeg" width="100%" height="700px"/>
+            <img
+                class="img-slideshow"
+                src="assets\imgbackgroud3.jpeg" width="100%" height="700px"/>
+        
+            <button onclick="plusDivs(-1)">Previous</button>
+            <button onclick="plusDivs(1)">Next</button>
+        </div>
+    
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+            showDivs((slideIndex += n));
+            }
+        
+        function showDivs(n) {
+        var i;
+            var imgList = document.getElementsByClassName("img-slideshow");
+            if (n > imgList.length) slideIndex = 1;
+            else if (n < 1) slideIndex = imgList.length;
+        
+            for (i = 0; i < imgList.length; i++) {
+                imgList[i].style.display = "none";
+            }
+        
+            imgList[slideIndex - 1].style.display = "block";
+            }
+        
+        setInterval(() => {
+            plusDivs(1);
+        }, 1000);
+    </script>
+    </section>
 
-<section class="message-us">
-    <h2>Message Us</h2>
-    <form>
-        <input type="text" placeholder="Nama" required>
-        <input type="date" placeholder="Tanggal Lahir" required>
-        <label>
-            <input type="radio" name="Jenis Kelamin" value="Laki-laki" required> Laki-laki
-        </label>
-        <label>
-            <input type="radio" name="Jenis Kelamin" value="Perempuan" required> Perempuan
-        </label>
-        <textarea placeholder="Pesan" rows="10" required></textarea>
-        <button type="submit">Submit</button>
-    </form>
-</section>
+    <!-- Our Headquarters -->
+    <section class="headquarters">
+        <h2>Our Headquarter</h2>
+        <div class="locations">
+            <figure>
+                <img src="assets\Jakarta.jpg" width="250px" height="350px" alt="Jakarta" />
+                <figcaption>Jakarta</figcaption>
+            </figure>
+            <figure>
+                <img src="assets\Bandung.jpg" width="250px" height="350px" alt="Bandung" />
+                <figcaption>Bandung</figcaption>
+            </figure>
+            <figure>
+                <img src="assets\Surabaya.jpg" width="250px" height="350px" alt="Surabaya" />
+                <figcaption>Surabaya</figcaption>
+            </figure>
+        </div>
+    </section>
 
-<footer class="footer">
-    <p>Copyright 2025 - Baymax</p>
-</footer>
+    <!-- Massage Us -->
+    <section class="message-us">
+        <h2>Message Us</h2>
+        <form>
+            <input type="text" placeholder="Nama" required>
+            <input type="date" placeholder="Tanggal Lahir" required>
+            <label>
+                <input type="radio" name="Jenis Kelamin" value="Laki-laki" required> Laki-laki
+            </label>
+            <label>
+                <input type="radio" name="Jenis Kelamin" value="Perempuan" required> Perempuan
+            </label>
+            <textarea placeholder="Pesan" rows="10" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright 2025 - Baymax</p>
+    </footer>
 
 </body>
 </html>
